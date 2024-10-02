@@ -2,7 +2,9 @@ import requests
 from bs4 import BeautifulSoup
 import sqlite3
 
-url = "https://www.swimcloud.com/recruiting/rankings/2025/M/?page=31"
+page_number = 31
+
+url = f"https://www.swimcloud.com/recruiting/rankings/2025/M/?page={page_number}"
 page = requests.get(url)
 
 soup = BeautifulSoup(page.content, "html.parser")
